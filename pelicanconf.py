@@ -11,8 +11,8 @@ PATH = 'content'
 OUTPUT_PATH = 'docs/'
 TIMEZONE = 'Asia/Shanghai'
 
-STATIC_PATHS = ['images', 'extra/favicon.ico']
-EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'},}
+STATIC_PATHS = ['images', 'extra/favicon.ico', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'}, 'extra/CNAME': {'path': 'CNAME'}}
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -46,9 +46,9 @@ I18N_SUBSITES = {
     'cn': {
         'SITENAME': 'AppInner的博客',
         'SITEURL': 'https://blog.appinner.com/cn',
-        'THEME':'pelican-themes/elegant'
-        }
+        'THEME': 'pelican-themes/elegant'
     }
+}
 
 # Blogroll
 LINKS = (('Appinner', 'https://www.appinner.com/'),)
