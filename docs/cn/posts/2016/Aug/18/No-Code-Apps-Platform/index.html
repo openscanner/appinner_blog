@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="AppInner" />
+        <meta name="copyright" content="AppInner" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="statistics, No-Code, platform, statistics, " />
+
+<meta property="og:title" content="利用AppInner统计在线App生成平台 "/>
+<meta property="og:url" content="../../../../../posts/2016/Aug/18/No-Code-Apps-Platform/" />
+<meta property="og:description" content="利用 AppInner 简单统计下无需编码的在线App生成平台实际情况" />
+<meta property="og:site_name" content="AppInner的博客" />
+<meta property="og:article:author" content="AppInner" />
+<meta property="og:article:published_time" content="2016-08-18T10:30:00+08:00" />
+<meta property="" content="2016-08-18T10:30:00+08:00" />
+<meta name="twitter:title" content="利用AppInner统计在线App生成平台 ">
+<meta name="twitter:description" content="利用 AppInner 简单统计下无需编码的在线App生成平台实际情况">
+
+        <title>利用AppInner统计在线App生成平台  · AppInner的博客
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/css/custom.css" media="screen">
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="../../../../../"><span class=site-name>AppInner的博客</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="../../../../..">Home</a></li>
+                            <li ><a href="../../../../../categories.html">Categories</a></li>
+                            <li ><a href="../../../../../tags.html">Tags</a></li>
+                            <li ><a href="../../../../../archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="../../../../../search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="../../../../../posts/2016/Aug/18/No-Code-Apps-Platform/"> 利用AppInner统计在线App生成平台  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p id="list-of-translations">
+This post is also available in:
+    <a href="../../../../../../posts/2016/Aug/18/No-Code-Apps-Platform/">en</a></p>
+
+            <h2>00 缘起</h2>
+<p>上周我们更新版本,在搜索页面中添加了几个简单的TOP统计数据。在检索关键 <a href="https://www.appinner.com/main/search?q=version:all&amp;page=1">version:all</a> 时,发现 package(包名) 统计数据有点意思。包名 air.com 高居第一位, 简单查了下,发现这个是 <a href="www.adobe.com/products/air.html">Adobe Air</a>平台使用的包名前缀, 看来 Air 的占有率还是蛮高的,以后有时间可以分析下。位于第三位的包名是: com.andromom, 查了下 <a href="http://www.andromo.com/">andromo.com</a> 居然是做 App 在线生成的, 这个刷新了作者的认知, 所以决定利用 AppInner 调查下这种平台的流行程度。</p>
+<blockquote>
+<p><a href="https://www.appinner.com/main/search?q=version:all&amp;page=1">version:all</a>  表示检索所有版本,默认情况下 <a href="https://www.appinner.com">AppInner</a> 只检索最新版本的app数据。</p>
+</blockquote>
+<h2>01 Andromo 统计</h2>
+<p>那怎么统计呢?</p>
+<blockquote>
+<p>鉴于 GooglePlay数据相对比较权威,因此限制只统计 GooglePlay, 对应搜索关键词 store:googleplay,后续检索中默认都会带此过滤。</p>
+</blockquote>
+<p>作者是通过 package:com.andromo 包名发现 andromo, 所以自然的使用搜索关键词 <a href="https://www.appinner.com/main/search?q=package:com.andromo store:googleplay&amp;page=1">package:com.andromo store:googleplay</a>, 结果如下图:</p>
+<p><img alt="com.andromo" src="../../../../../../images/pacakge_com.andromo.png" /></p>
+<p>点击查看 App 的详情,发现它们的证书都是一样的:</p>
+<div class="highlight"><pre><span></span><span class="n">owner</span><span class="o">:</span> <span class="n">CN</span><span class="o">=</span><span class="n">Andromo</span> <span class="n">App</span><span class="o">,</span> <span class="n">OU</span><span class="o">=</span><span class="n">Development</span><span class="o">,</span> <span class="n">O</span><span class="o">=</span><span class="s2">&quot;Andromo.com L=Winnipeg&quot;</span><span class="o">,</span> <span class="n">ST</span><span class="o">=</span><span class="n">MB</span><span class="o">,</span> <span class="n">C</span><span class="o">=</span><span class="n">CA</span>
+<span class="n">cert_sha256</span><span class="o">:</span> <span class="n">C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408</span>
+<span class="n">serial_number</span><span class="o">:</span> <span class="mi">1312389651</span>
+<span class="n">sig_alg_OID</span><span class="o">:</span> <span class="mf">1.2</span><span class="o">.</span><span class="mf">840.113549</span><span class="o">.</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">5</span>
+<span class="n">version</span><span class="o">:</span> <span class="mi">3</span>
+<span class="n">issuer</span><span class="o">:</span> <span class="n">CN</span><span class="o">=</span><span class="n">Andromo</span> <span class="n">App</span><span class="o">,</span> <span class="n">OU</span><span class="o">=</span><span class="n">Development</span><span class="o">,</span> <span class="n">O</span><span class="o">=</span><span class="s2">&quot;Andromo.com L=Winnipeg&quot;</span><span class="o">,</span> <span class="n">ST</span><span class="o">=</span><span class="n">MB</span><span class="o">,</span> <span class="n">C</span><span class="o">=</span><span class="n">CA</span>
+<span class="n">sig_algorithm</span><span class="o">:</span> <span class="n">SHA1withRSA</span>
+</pre></div>
+
+
+<p>因此利用证书进行检索, 
+<a href="https://www.appinner.com/main/search?q=cert:%27C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408%27%20store:googleplay&amp;page=1">cert:'C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408' store:googleplay</a>。结果如下:</p>
+<p><img alt="com.andromo_cert" src="../../../../../../images/package_com.andromo_cert.png" /></p>
+<p>对上面两个结果简单分析: 
+1. 证书检索出来的 app 有 15699 个, 包名的结果只有 8415, 利用证书检索的结果更准确。
+2. 同时将近一半利用 andromo 生成的app没有使用默认包名。
+3. 左边栏统计数据中, 看起来前几位的开发者都至少开发了上百款App, 还真是高产。 </p>
+<p>左边栏最上面有CreateReport功能, 我们来看一下结果。AppInner提供了对搜索结果创建报告的功能,点击后提示需要先创建Profile(登录后用户)。</p>
+<p><img alt="create_profile_andromo" src="../../../../../../images/create_profile_andromo.png" /></p>
+<p>输入个名字,点击创建(Create), 然后在MyProfile看到一个新的Profile。</p>
+<p><img alt="myprofile_andromo" src="../../../../../../images/myprofile_andromo.png" /></p>
+<p>点击创建报告(Create Report), 等待片刻, 提示创建成功, 然后就可以点击新生成的报告查看, 报告页有点长, 有兴趣的可以自己去建一个看看,我这里只截取2个看一下。如果数据和我这里的不一致是正常的,因为AppInner每天的数据都在快速增长。</p>
+<p>第一个是类型分布,看起来音乐和娱乐类型加起来超过了1/3。
+<img alt="AndromoApp_report_1" src="../../../../../../images/AndromoApp_report_1.png" /></p>
+<p>第二个是下载量, 绝大部多数 App 都没什么人用, 但是也有30个超过了百万, 甚至还有2个超过了5百万。
+<img alt="AndromoApp_report_2" src="../../../../../../images/AndromoApp_report_2.png" /></p>
+<p>Andromo 在其主页上宣称其是: <code>The #1 Android App Maker Platform.</code>, 是真的吗? </p>
+<h2>02 平台统计</h2>
+<p>作者统计了20个平台在GooglePlay上的App数量。直接列表如下:</p>
+<table>
+<thead>
+<tr>
+<th>厂商</th>
+<th>主页</th>
+<th>搜索词</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>andromo</td>
+<td><a href="">http://andromo.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408">store:googleplay cert:C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408</a></td>
+<td>15699</td>
+</tr>
+<tr>
+<td>biznessapps</td>
+<td><a href="">https://www.biznessapps.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay  cert:FDA9F9E77A33FFC6C51E1AEE76C894E173F23981A0BFA1621D706010B5D5BCC3">store:googleplay  cert:FDA9F9E77A33FFC6C51E1AEE76C894E173F23981A0BFA1621D706010B5D5BCC3</a></td>
+<td>13547</td>
+</tr>
+<tr>
+<td>como</td>
+<td><a href="">http://www.como.com/</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:AEDF00DFD06A4EC28CCD3E0F62AC323D1B057A2643D500CB26AC7D1AD68583B9">store:googleplay cert:AEDF00DFD06A4EC28CCD3E0F62AC323D1B057A2643D500CB26AC7D1AD68583B9</a></td>
+<td>5817</td>
+</tr>
+<tr>
+<td>mobincube</td>
+<td><a href="">http://www.mobincube.com/</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:A54E5071DD54EC05DB57390F33E384037D183505ECB20383D20FF32729A1FDF5">store:googleplay cert:A54E5071DD54EC05DB57390F33E384037D183505ECB20383D20FF32729A1FDF5</a></td>
+<td>3519</td>
+</tr>
+<tr>
+<td>gamesalad</td>
+<td><a href="">http://gamesalad.com/</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay  activity:com.gamesalad.player.GSGameWrapperActivity">store:googleplay  activity:com.gamesalad.player.GSGameWrapperActivity</a></td>
+<td>3208</td>
+</tr>
+<tr>
+<td>goodbarber</td>
+<td><a href="">http://goodbarber.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay%20cert:%27CN=GoodBarber,%20OU=GoodBarber,%20O=GoodBarber,%20L=Ajaccio,%20ST=Corsica,%20C=FR%27">store:googleplay cert:'CN=GoodBarber, OU=GoodBarber, O=GoodBarber, L=Ajaccio, ST=Corsica, C=FR'</a></td>
+<td>2654</td>
+</tr>
+<tr>
+<td>appmk</td>
+<td><a href="">http://www.appmk.com/</a></td>
+<td><a href="https://www.appinner.com/main/search?q=cert:%27CN=&quot;appmk%20OU%20=%20%20O%20=%20%20L%20=%20%20ST%20=%20%20C%20=&quot;%27%20store:googleplay">store:googleplay cert:'CN="appmk OU =  O =  L =  ST =  C ="'</a></td>
+<td>2164</td>
+</tr>
+<tr>
+<td>shoutem</td>
+<td><a href="">http://shoutem.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:3ED6FFBE447B6E39D7FF0DD7B732B885502C9817743D95C5FF4C4C19C7A83449">store:googleplay cert:'3ED6FFBE447B6E39D7FF0DD7B732B885502C9817743D95C5FF4C4C19C7A83449'</a></td>
+<td>1078</td>
+</tr>
+<tr>
+<td>appmachine</td>
+<td><a href="">http://www.appmachine.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay%20cert:%27CN=AppMachine%20B.V.,%20OU=AppMachine%20B.V.,%20O=AppMachine%20B.V.,%20L=Heerenveen,%20ST=Friesland,%20C=NL%27">store:googleplay cert:'CN=AppMachine B.V., OU=AppMachine B.V., O=AppMachine B.V., L=Heerenveen, ST=Friesland, C=NL'</a></td>
+<td>1072</td>
+</tr>
+<tr>
+<td>doubledutch</td>
+<td><a href="">http://doubledutch.me</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:19509AA81D9FFFF0BA768081F93F5144F7FFC17681A5E634D8FD38DC46811BD0">store:googleplay cert:19509AA81D9FFFF0BA768081F93F5144F7FFC17681A5E634D8FD38DC46811BD0</a></td>
+<td>775</td>
+</tr>
+<tr>
+<td>appyourself</td>
+<td><a href="">http://appyourself.net</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay (package:net.ays OR cert:58F7E8877F8B2293F2487F8CC950436702774CCBBF13E4B54E4B640E2EECFB5F)">store:googleplay (package:net.ays OR cert:'58F7E8877F8B2293F2487F8CC950436702774CCBBF13E4B54E4B640E2EECFB5F')</a></td>
+<td>585</td>
+</tr>
+<tr>
+<td>mindbodyonline</td>
+<td><a href="">https://www.mindbodyonline.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay package:com.fitnessmobileapps">store:googleplay package:com.fitnessmobileapps</a></td>
+<td>505</td>
+</tr>
+<tr>
+<td>appsbuilder</td>
+<td><a href="">http://www.apps-builder.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:3FE3C632E9056FE216FBD32AA8EFC7EAD07D6C7575F0173356B2CE562EC6FA62">store:googleplay cert:'3FE3C632E9056FE216FBD32AA8EFC7EAD07D6C7575F0173356B2CE562EC6FA62'</a></td>
+<td>504</td>
+</tr>
+<tr>
+<td>buildfire</td>
+<td><a href="">http://buildfire.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:2F79244FDCAE40577158705DE6F54F70BA26EF38DFF0D93D1AA8BD29B23F1FAB">store:googleplay cert:2F79244FDCAE40577158705DE6F54F70BA26EF38DFF0D93D1AA8BD29B23F1FAB</a></td>
+<td>502</td>
+</tr>
+<tr>
+<td>appmakr</td>
+<td><a href="">http://www.appmakr.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay package:com.appmakr">store:googleplay package:com.appmakr</a></td>
+<td>482</td>
+</tr>
+<tr>
+<td>attendify</td>
+<td>https://attendify.com/</td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay  cert:F717C51513F8CAE219CC5EB18F45E96AE11C8695DB871EBF6BC7B767B1CF195E">store:googleplay  cert:F717C51513F8CAE219CC5EB18F45E96AE11C8695DB871EBF6BC7B767B1CF195E</a></td>
+<td>337</td>
+</tr>
+<tr>
+<td>mobileroadie</td>
+<td><a href="">http://www.mobileroadie.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay cert:" title="4C60928082698D59DBCE664BC6519A553C8D705D3D80CB205CF9622551B28488">store:googleplay cert:'4C60928082698D59DBCE664BC6519A553C8D705D3D80CB205CF9622551B28488'</a></td>
+<td>318</td>
+</tr>
+<tr>
+<td>appypie</td>
+<td><a href="">http://www.appypie.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay package:com.appypie">store:googleplay package:com.appypie</a></td>
+<td>304</td>
+</tr>
+<tr>
+<td>appery</td>
+<td><a href="">https://appery.io</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay package:io.appery">store:googleplay package:io.appery</a></td>
+<td>182</td>
+</tr>
+<tr>
+<td>mobappcreator</td>
+<td><a href="">http://www.mobappcreator.com</a></td>
+<td><a href="https://www.appinner.com/main/search?q=store:googleplay activity:com.defconsolutions.mobappcreator">store:googleplay activity:com.defconsolutions.mobappcreator</a></td>
+<td>116</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>AppInner 的数据本身在增长,因此后续看到的数据肯定是变化了。</p>
+</blockquote>
+<p>可以看到, 各平台的搜索词有差异,主要是3类:</p>
+<ol>
+<li>证书 : 14个平台都使用了唯一的证书或证书属性一致</li>
+<li>包名 : 4个平台的应用都以特定的包名开头</li>
+<li>activity: 2个平台应用包含特定的activity</li>
+</ol>
+<p>对上述数据绘制统计图:</p>
+<p><img alt="platform_1" src="../../../../../../images/no_code_platform_1.png" />
+<img alt="platform_2" src="../../../../../../images/no_code_platform_2.png" /></p>
+<p>看来这个市场也已经趋于集中, Andromo + biznessapps 在20个厂商中占有超过了 <em>50%</em>, 加上 como 已经超过 <em>60%</em>。</p>
+<h2>03 总结</h2>
+<p>以上利用 AppInner 对 Andromo 等在线生成App平台在GooglePlay中实际的情况进行了下简单的统计, 时间有限, 没有进一步深入分析。 比如 gamesalad 虽然看上去占有率不高,但是其在游戏领域绝对是第一。有兴趣或有需要的同学可以对相关数据更深入的分析。</p>
+            
+            
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2016-08-18T10:30:00+08:00">Aug 18, 2016</time>
+
+<h4>Last Updated</h4>
+<time datetime="2016-08-18T10:30:00+08:00">Aug 18, 2016</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="../../../../../categories.html#statistics-ref">statistics</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="../../../../../tags.html#no-code-ref">No-Code
+                    <span>1</span>
+</a></li>
+                <li><a href="../../../../../tags.html#platform-ref">platform
+                    <span>1</span>
+</a></li>
+                <li><a href="../../../../../tags.html#statistics-ref">statistics
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://twitter.com/appinner" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://www.facebook.com/appinner" title="My facebook Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-facebook sidebar-social-links"></i></a>
+    <a href="mailto:support@appinner.com" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
+</html>
