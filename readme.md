@@ -13,7 +13,8 @@
 pip install pelican markdown
 
 cd appinner_blog
-git submodule update --init --recursive
+git clone --recursive https://github.com/getpelican/pelican-themes
+git clone --recursive https://github.com/getpelican/pelican-plugins
 
 ```
 
