@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="AppInner" />
+        <meta name="copyright" content="AppInner" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="statistics, platform, permission, statistics, " />
+
+<meta property="og:title" content="对比各应用商店下应用的权限差别 "/>
+<meta property="og:url" content="../../../../../posts/2016/Aug/25/permissions-on-stores/" />
+<meta property="og:description" content="利用 AppInner 简单统计下各应用商店下app权限的差别." />
+<meta property="og:site_name" content="AppInner的博客" />
+<meta property="og:article:author" content="AppInner" />
+<meta property="og:article:published_time" content="2016-08-25T14:30:00+08:00" />
+<meta property="" content="2016-08-25T14:30:00+08:00" />
+<meta name="twitter:title" content="对比各应用商店下应用的权限差别 ">
+<meta name="twitter:description" content="利用 AppInner 简单统计下各应用商店下app权限的差别.">
+
+        <title>对比各应用商店下应用的权限差别  · AppInner的博客
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../../../../theme/css/custom.css" media="screen">
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="../../../../../"><span class=site-name>AppInner的博客</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="../../../../..">Home</a></li>
+                            <li ><a href="../../../../../categories.html">Categories</a></li>
+                            <li ><a href="../../../../../tags.html">Tags</a></li>
+                            <li ><a href="../../../../../archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="../../../../../search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="../../../../../posts/2016/Aug/25/permissions-on-stores/"> 对比各应用商店下应用的权限差别  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p id="list-of-translations">
+This post is also available in:
+    <a href="../../../../../../posts/2016/Aug/25/permissions-on-stores/">en</a></p>
+
+            <h2>00 序言</h2>
+<p>大家到应用商店下载应用，都会看到app请求的权限列表，用户在安装之前也会弹出请求权限的提示。</p>
+<blockquote>
+<p>App要实现其功能，是需要请求各种权限的，但是也有些app借助这种便利，去申请了它并不需要的权限，
+甚至利用一些申请到的敏感权限去收集用户隐私，窃取其他app的运行数据等等。</p>
+<p>比如，我们就看到过明明是同样的app，在不同的应用商店中权限要求会不一样。</p>
+</blockquote>
+<h2>01 分析方法</h2>
+<h3>分析哪些权限？</h3>
+<blockquote>
+<p>安卓应用的权限要求多达数百种，单单官方的权限列表就高达一百种以上，除此之外还有一些app自定义了各种稀奇古怪的权限要求
+（这个容我有时间也会做一个详细的分析），因此对这上百种权限要求进行分类统计会比较耗时耗力，</p>
+</blockquote>
+<p>我们决定有选择性的挑一些特别敏感的权限进行分析。</p>
+<h3>如何进行分析？</h3>
+<p>最为科学合理的分析方法应该是，逐个比对相同类型的app的权限要求，然后对这些权限要求进行分类统计，
+以此为基础再对各个不同的应用商店进行对比。</p>
+<p>但是这样我们面临两个问题:</p>
+<ul>
+<li>一个就是各应用商店内的app总数并不相同，</li>
+<li>另一个就是不同的应用商店，其app的分类标准也不一样。</li>
+</ul>
+<p>我们最终选取了一个更加简便的方法:</p>
+<blockquote>
+<p>以单个应用商店为对象，统计其对应的权限数量，然后对应用的总数求平均数，这个平均值作为本文的主要比较对象。
+以上方法相对简单，考虑到数百万的应用样本数量，这种比较方法还是有一定的分析价值的。 </p>
+</blockquote>
+<h3>分析范围</h3>
+<p>Android应用商店，我们选取了最有代表性的googleplay，这个也是谷歌的官方应用商店，目前应用的数量110多万，
+另外我们选取了国内的腾讯、豌豆荚、360、mi和安智等10个有代表性的应用商店，应用样本数量30多万。</p>
+<p>权限的分析我们根据谷歌官方提供的敏感权限列表选择了</p>
+<ul>
+<li>android.permission.ACCESS_FINE_LOCATION 访问精确的位置(如GPS)；</li>
+<li>android.permission.READ_CONTACTS 读取用户联系人数据</li>
+<li>android.permission.CAMERA 调用摄像头</li>
+<li>android.permission.READ_SMS 读取短信息</li>
+</ul>
+<h3>分析结果</h3>
+<ul>
+<li>样本总数</li>
+</ul>
+<blockquote>
+<p><a href="https://www.appinner.com/main/search?q=version:all&amp;page=1">version:all</a></p>
+<p>将该搜索保存成myprofile后，可以绘图查看</p>
+</blockquote>
+<p><img alt="store.count" src="../../../../../../images/permissions_stores_count.png" /></p>
+<ul>
+<li>调用了四种权限中任意一种的样本数量统计</li>
+</ul>
+<blockquote>
+<p><a href="https://www.appinner.com/main/search?q=(permission:android.permission.ACCESS_FINE_LOCATION)%20or%20%20(permission:android.permission.READ_CONTACTS)%20%20or%20(permission:android.permission.CAMERA)%20or%20(permission:android.permission.READ_SMS)&amp;page=1">permission:android.permission.ACCESS_FINE_LOCATION or permission:android.permission.READ_CONTACTS or permission:android.permission.CAMERA or permission:android.permission.READ_SMS</a></p>
+</blockquote>
+<p><img alt="or.count" src="../../../../../../images/permissions_or_count.png" /></p>
+<ul>
+<li>调用了四种权限中所有权限的样本数量统计</li>
+</ul>
+<blockquote>
+<p><a href="https://www.appinner.com/main/search?q=(permission:android.permission.ACCESS_FINE_LOCATION)%20%20%20(permission:android.permission.READ_CONTACTS)%20%20(permission:android.permission.CAMERA)%20%20(permission:android.permission.READ_SMS)&amp;page=1">permission:android.permission.ACCESS_FINE_LOCATION permission:android.permission.READ_CONTACTS  permission:android.permission.CAMERA  permission:android.permission.READ_SMS</a></p>
+</blockquote>
+<p><img alt="and.count" src="../../../../../../images/permissions_and_count.png" /></p>
+<ul>
+<li>应用商店中使用了以上四种敏感权限的app占比</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>商店名称</th>
+<th>样本总数</th>
+<th>一种敏感权限</th>
+<th>比例</th>
+<th>四种敏感权限</th>
+<th>比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Googleplay</td>
+<td>1124145</td>
+<td>247660</td>
+<td>22.03%</td>
+<td>1625</td>
+<td>0.14%</td>
+</tr>
+<tr>
+<td>Anzhi</td>
+<td>113849</td>
+<td>39744</td>
+<td>34.91%</td>
+<td>1593</td>
+<td>1.40%</td>
+</tr>
+<tr>
+<td>360</td>
+<td>55693</td>
+<td>14736</td>
+<td>26.46%</td>
+<td>748</td>
+<td>1.34%</td>
+</tr>
+<tr>
+<td>Wandoujia</td>
+<td>32068</td>
+<td>10912</td>
+<td>34.03%</td>
+<td>517</td>
+<td>1.61%</td>
+</tr>
+<tr>
+<td>Pc6</td>
+<td>26653</td>
+<td>6618</td>
+<td>24.83%</td>
+<td>486</td>
+<td>1.82%</td>
+</tr>
+<tr>
+<td>Pp</td>
+<td>19433</td>
+<td>6497</td>
+<td>33.43%</td>
+<td>477</td>
+<td>2.45%</td>
+</tr>
+<tr>
+<td>Mi</td>
+<td>14495</td>
+<td>4909</td>
+<td>33.87%</td>
+<td>386</td>
+<td>2.66%</td>
+</tr>
+<tr>
+<td>Huawei</td>
+<td>11542</td>
+<td>4735</td>
+<td>41.02%</td>
+<td>376</td>
+<td>3.26%</td>
+</tr>
+<tr>
+<td>Lenovo</td>
+<td>10329</td>
+<td>3872</td>
+<td>37.49%</td>
+<td>279</td>
+<td>2.70%</td>
+</tr>
+<tr>
+<td>Iqiyi</td>
+<td>9700</td>
+<td>3522</td>
+<td>36.31%</td>
+<td>215</td>
+<td>2.22%</td>
+</tr>
+</tbody>
+</table>
+<h3>结论</h3>
+<p>从上面的分析结果来看，googleplay上app的敏感权限比例还是比较低的，不愧是android的官方商店。</p>
+<p>以上分析会随着总样本数量的增加而更加精确，欢迎使用<a href="https://www.appinner.com">AppInner</a>查看最新的搜索结果。</p>
+            
+            
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="../../../../../posts/2016/Aug/18/No-Code-Apps-Platform/" title="Previous: 利用AppInner统计在线App生成平台">利用AppInner统计在线App生成平台</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2016-08-25T14:30:00+08:00">Aug 25, 2016</time>
+
+<h4>Last Updated</h4>
+<time datetime="2016-08-25T14:30:00+08:00">Aug 25, 2016</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="../../../../../categories.html#statistics-ref">statistics</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="../../../../../tags.html#permission-ref">permission
+                    <span>1</span>
+</a></li>
+                <li><a href="../../../../../tags.html#platform-ref">platform
+                    <span>2</span>
+</a></li>
+                <li><a href="../../../../../tags.html#statistics-ref">statistics
+                    <span>2</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://twitter.com/appinner" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://www.facebook.com/appinner" title="My facebook Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-facebook sidebar-social-links"></i></a>
+    <a href="mailto:support@appinner.com" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
+</html>

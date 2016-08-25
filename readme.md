@@ -13,8 +13,7 @@
 pip install pelican markdown
 
 cd appinner_blog
-git clone --recursive https://github.com/getpelican/pelican-themes
-git clone --recursive https://github.com/getpelican/pelican-plugins
+git submodule update --init --recursive
 
 ```
 
@@ -60,3 +59,7 @@ make html
 发布到 github page, 这里使用了 master分支 docs 目录,所以不用 提交到 gh-pages 分支。
 
 将 docs 和 content目录提交到 master 即可
+
+## 访问地址
+
+https://openscanner.github.io/appinner_blog/
