@@ -24,7 +24,7 @@ Summary: 利用 [AppInner](https://www.appinner.com) 简单统计下无需编码
 
 
 点击查看 App 的详情,发现它们的证书都是一样的:
-```
+```txt
 owner: CN=Andromo App, OU=Development, O="Andromo.com L=Winnipeg", ST=MB, C=CA
 cert_sha256: C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408
 serial_number: 1312389651
@@ -34,8 +34,10 @@ issuer: CN=Andromo App, OU=Development, O="Andromo.com L=Winnipeg", ST=MB, C=CA
 sig_algorithm: SHA1withRSA
 ```
 
-因此利用证书进行检索, 
-[cert:'C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408' store:googleplay](https://www.appinner.com/main/search?q=cert:%27C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408%27%20store:googleplay&page=1)。结果如下:
+因此利用证书进行检索:  
+[cert:'C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408' store:googleplay](https://www.appinner.com/main/search?q=cert:%27C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408%27%20store:googleplay&page=1)。
+
+结果如下:
 
 ![com.andromo_cert]({filename}/images/package_com.andromo_cert.png)
 
@@ -55,9 +57,11 @@ sig_algorithm: SHA1withRSA
 点击创建报告(Create Report), 等待片刻, 提示创建成功, 然后就可以点击新生成的报告查看, 报告页有点长, 有兴趣的可以自己去建一个看看,我这里只截取2个看一下。如果数据和我这里的不一致是正常的,因为AppInner每天的数据都在快速增长。
 
 第一个是类型分布,看起来音乐和娱乐类型加起来超过了1/3。
+
 ![AndromoApp_report_1]({filename}/images/AndromoApp_report_1.png)
 
 第二个是下载量, 绝大部多数 App 都没什么人用, 但是也有30个超过了百万, 甚至还有2个超过了5百万。
+
 ![AndromoApp_report_2]({filename}/images/AndromoApp_report_2.png)
 
 Andromo 在其主页上宣称其是: `The #1 Android App Maker Platform.`, 是真的吗? 

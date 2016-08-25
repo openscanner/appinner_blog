@@ -3,7 +3,7 @@ Date: 2016-8-25 17:30
 Modified: 2016-8-25 17:30
 lang: en
 Category: statistics
-Tags: statistics, platform
+Tags: statistics
 Slug: is_the_end_of_apps
 Summary: Simply do statistics app downloads based on time.
 
