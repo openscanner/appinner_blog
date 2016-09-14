@@ -11,9 +11,9 @@ https://blog.appinner.com/posts/2016/Aug/25/is_the_end_of_apps/
 https://blog.appinner.com/posts/2016/Aug/25/permissions-on-stores/
 https://blog.appinner.com/posts/2016/Aug/18/No-Code-Apps-Platform/
 https://blog.appinner.com/category/statistics.html
-https://blog.appinner.com/tag/https.html
 https://blog.appinner.com/tag/permission.html
-https://blog.appinner.com/tag/statistics.html
 https://blog.appinner.com/tag/platform.html
 https://blog.appinner.com/tag/no-code.html
+https://blog.appinner.com/tag/https.html
+https://blog.appinner.com/tag/statistics.html
 https://blog.appinner.com/author/appinner.html
