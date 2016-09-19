@@ -60,7 +60,7 @@ SOCIAL = (('twitter', 'https://twitter.com/appinner'),
 
 TWITTER_URL = 'https://twitter.com/appinner'
 FACEBOOK_URL = 'https://www.facebook.com/appinner'
-GOOGLEPLUS_URL = ''
+GOOGLEPLUS_URL = 'https://plus.google.com/u/0/100784736284138884129/'
 
 DEFAULT_PAGINATION = 10
 
@@ -68,3 +68,4 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 # GOOGLE_ANALYTICS
+GOOGLE_ANALYTICS = 'UA-81863236-1'
