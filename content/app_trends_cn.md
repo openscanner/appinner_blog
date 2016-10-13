@@ -21,7 +21,7 @@ https://www.appinner.com/main/page/apptrend
 
 
 # 3.从googleplay的趋势中能看到哪些机会？
-![app_trends](./app_trends.png)
+![app_trends]({filename}/images/app_trends.png?raw=true)
 
 最开始，2008年10月，googleplay商店里面只有tools、game、travel and local这几个类型，这些可能是大家一开始能想到的用智能手机能做的工作了。随后finance、social、entertainment等类别逐渐出现，而后随着时间的推移，app的类别越来越丰富。
 
