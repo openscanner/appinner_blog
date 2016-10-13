@@ -25,7 +25,7 @@ https://www.appinner.com/main/page/apptrend
 
 最开始，2008年10月，googleplay商店里面只有tools、game、travel and local这几个类型，这些可能是大家一开始能想到的用智能手机能做的工作了。随后finance、social、entertainment等类别逐渐出现，而后随着时间的推移，app的类别越来越丰富。
 
-2010年低，但类型app的平均下载量刚超过10万，2011年底则有多个类型app的平均下载量已突破500万。2012年低，app进一步分化，social、transport、shopping、media等类型下载量越来越大，竞争越发白热化，而sports、business和medical类型则还出于低位，此时app开发者的大好时机应该是这些类别的应用。
+2010年底，但类型app的平均下载量刚超过10万，2011年底则有多个类型app的平均下载量已突破500万。2012年低，app进一步分化，social、transport、shopping、media等类型下载量越来越大，竞争越发白热化，而sports、business和medical类型则还出于低位，此时app开发者的大好时机应该是这些类别的应用。
 2013年底，media and video类型的app平均下载量已突破1000万，media and video、communication、social、transport、music、media类型的app在平均下载量上成为第一梯队；tools、shopping、productivity、news&magazine和photography成为第二梯队。新闻和美图快速成长（2012年8月今日头条发布第一个版本）。
 2014年的数据显示，所有app的平均下载量都开始略微下降，而每个类型的app的数量开始迅速上升，反应在图上的趋势就是整体的数据点左移，各个点都在快速增大，其中以game类型尤为明显，客观上来说，从2014年开始，更多的人开发了更多的app，竞争压力增大了。
 
