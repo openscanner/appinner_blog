@@ -18,7 +18,7 @@ Summary: 利用 [AppInner](https://www.appinner.com)后台数据统计分析andr
 本次分析使用了appinner线上的1,361,737条数据．其中应用商店app所占比例见下图：
 ![img]({filename}/images/stores_distribution.png?raw=true)
 
-这里主要使用了googleplay的数据源，国内数据的质量不如googleplay，仅使用了一小部分
+这里主要使用了googleplay的数据源，其它应用商店的数据质量不如googleplay，仅使用了一小部分
 
 # 数据分析<a id="sec-2"></a>
 
