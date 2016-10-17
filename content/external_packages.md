@@ -3,7 +3,7 @@ Date: 2016-10-17 14:30
 Modified: 2016-10-17 14:30
 lang: en
 Category: statistics
-Tags: statistics
+Tags: statistics,top100,package,sdk
 Slug: external-packages
 Summary: Simply do statistics those external packages in android app using appinner's database.
 
