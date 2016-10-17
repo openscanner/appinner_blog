@@ -19,7 +19,7 @@ Summary: 利用 [AppInner](https://www.appinner.com) 简单统计下无需编码
 
 作者是通过 package:com.andromo 包名发现 andromo, 所以自然的使用搜索关键词 [package:com.andromo store:googleplay](https://www.appinner.com/main/search?q=package:com.andromo store:googleplay&page=1), 结果如下图:
 
-![com.andromo]({filename}/images/pacakge_com.andromo.png)
+![com.andromo]({filename}/images/pacakge_com.andromo.png?raw=true)
 
 
 
@@ -39,7 +39,7 @@ sig_algorithm: SHA1withRSA
 
 结果如下:
 
-![com.andromo_cert]({filename}/images/package_com.andromo_cert.png)
+![com.andromo_cert]({filename}/images/package_com.andromo_cert.png?raw=true)
 
 对上面两个结果简单分析: 
 1. 证书检索出来的 app 有 15699 个, 包名的结果只有 8415, 利用证书检索的结果更准确。
@@ -48,21 +48,21 @@ sig_algorithm: SHA1withRSA
 
 左边栏最上面有CreateReport功能, 我们来看一下结果。AppInner提供了对搜索结果创建报告的功能,点击后提示需要先创建Profile(登录后用户)。
 
-![create_profile_andromo]({filename}/images/create_profile_andromo.png)
+![create_profile_andromo]({filename}/images/create_profile_andromo.png?raw=true)
 
 输入个名字,点击创建(Create), 然后在MyProfile看到一个新的Profile。
 
-![myprofile_andromo]({filename}/images/myprofile_andromo.png)
+![myprofile_andromo]({filename}/images/myprofile_andromo.png?raw=true)
 
 点击创建报告(Create Report), 等待片刻, 提示创建成功, 然后就可以点击新生成的报告查看, 报告页有点长, 有兴趣的可以自己去建一个看看,我这里只截取2个看一下。如果数据和我这里的不一致是正常的,因为AppInner每天的数据都在快速增长。
 
 第一个是类型分布,看起来音乐和娱乐类型加起来超过了1/3。
 
-![AndromoApp_report_1]({filename}/images/AndromoApp_report_1.png)
+![AndromoApp_report_1]({filename}/images/AndromoApp_report_1.png?raw=true)
 
 第二个是下载量, 绝大部多数 App 都没什么人用, 但是也有30个超过了百万, 甚至还有2个超过了5百万。
 
-![AndromoApp_report_2]({filename}/images/AndromoApp_report_2.png)
+![AndromoApp_report_2]({filename}/images/AndromoApp_report_2.png?raw=true)
 
 Andromo 在其主页上宣称其是: `The #1 Android App Maker Platform.`, 是真的吗? 
 
@@ -105,8 +105,8 @@ Andromo 在其主页上宣称其是: `The #1 Android App Maker Platform.`, 是�
 
 对上述数据绘制统计图:
 
-![platform_1]({filename}/images/no_code_platform_1.png)
-![platform_2]({filename}/images/no_code_platform_2.png)
+![platform_1]({filename}/images/no_code_platform_1.png?raw=true)
+![platform_2]({filename}/images/no_code_platform_2.png?raw=true)
 
 看来这个市场也已经趋于集中, Andromo + biznessapps 在20个厂商中占有超过了 *50%*, 加上 como 已经超过 *60%*。
 

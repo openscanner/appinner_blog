@@ -24,7 +24,7 @@ Summary: 利用 [AppInner](https://www.appinner.com)统计应用商店上近几�
 
 **2012年来googleplay发布的应用数量**
 
-![2012_googleplay]({filename}/images/end_of_apps_2012_googleplay.png)
+![2012_googleplay]({filename}/images/end_of_apps_2012_googleplay.png?raw=true)
 
 需要注意的是一些早几年发布的应用在持续更新． 根据googleplay的统计规则，也都算到其发布更新的当年了。
 
@@ -36,7 +36,7 @@ Summary: 利用 [AppInner](https://www.appinner.com)统计应用商店上近几�
 
 **2012年来Googleplay下载量在1千万以上的app数量**
 
-![2012_googleplay_topdown]({filename}/images/end_of_apps_2012_googleplay_topdown.png)
+![2012_googleplay_topdown]({filename}/images/end_of_apps_2012_googleplay_topdown.png?raw=true)
 
 从上图的数据来看，数据一直是迅猛增长，丝毫不见app的颓势。
 
@@ -51,7 +51,7 @@ Summary: 利用 [AppInner](https://www.appinner.com)统计应用商店上近几�
 
 **2016年以来发布的下载量1千万以上的app分类**
 
-![2016_googleplay_topdown]({filename}/images/end_of_apps_2016_topdown.png)
+![2016_googleplay_topdown]({filename}/images/end_of_apps_2016_topdown.png?raw=true)
  
 这个分类是根据Googleplay的分类标准而来，Googleplay对game类型进行了细分。
 

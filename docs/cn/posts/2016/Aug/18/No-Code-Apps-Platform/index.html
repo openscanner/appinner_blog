@@ -91,7 +91,7 @@ This post is also available in:
 <p>鉴于 GooglePlay数据相对比较权威,因此限制只统计 GooglePlay, 对应搜索关键词 store:googleplay,后续检索中默认都会带此过滤。</p>
 </blockquote>
 <p>作者是通过 package:com.andromo 包名发现 andromo, 所以自然的使用搜索关键词 <a href="https://www.appinner.com/main/search?q=package:com.andromo store:googleplay&amp;page=1">package:com.andromo store:googleplay</a>, 结果如下图:</p>
-<p><img alt="com.andromo" src="../../../../../../images/pacakge_com.andromo.png" /></p>
+<p><img alt="com.andromo" src="../../../../../../images/pacakge_com.andromo.png?raw=true" /></p>
 <p>点击查看 App 的详情,发现它们的证书都是一样的:</p>
 <div class="highlight"><pre><span></span><span class="n">owner</span><span class="o">:</span> <span class="n">CN</span><span class="o">=</span><span class="n">Andromo</span> <span class="n">App</span><span class="o">,</span> <span class="n">OU</span><span class="o">=</span><span class="n">Development</span><span class="o">,</span> <span class="n">O</span><span class="o">=</span><span class="s2">&quot;Andromo.com L=Winnipeg&quot;</span><span class="o">,</span> <span class="n">ST</span><span class="o">=</span><span class="n">MB</span><span class="o">,</span> <span class="n">C</span><span class="o">=</span><span class="n">CA</span>
 <span class="n">cert_sha256</span><span class="o">:</span> <span class="n">C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408</span>
@@ -106,20 +106,20 @@ This post is also available in:
 <p>因此利用证书进行检索:<br />
 <a href="https://www.appinner.com/main/search?q=cert:%27C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408%27%20store:googleplay&amp;page=1">cert:'C262A97FE5596C49A9560F0964D0408881EE5A982ED4B9BDFDD7F731EE8DA408' store:googleplay</a>。</p>
 <p>结果如下:</p>
-<p><img alt="com.andromo_cert" src="../../../../../../images/package_com.andromo_cert.png" /></p>
+<p><img alt="com.andromo_cert" src="../../../../../../images/package_com.andromo_cert.png?raw=true" /></p>
 <p>对上面两个结果简单分析: 
 1. 证书检索出来的 app 有 15699 个, 包名的结果只有 8415, 利用证书检索的结果更准确。
 2. 同时将近一半利用 andromo 生成的app没有使用默认包名。
 3. 左边栏统计数据中, 看起来前几位的开发者都至少开发了上百款App, 还真是高产。 </p>
 <p>左边栏最上面有CreateReport功能, 我们来看一下结果。AppInner提供了对搜索结果创建报告的功能,点击后提示需要先创建Profile(登录后用户)。</p>
-<p><img alt="create_profile_andromo" src="../../../../../../images/create_profile_andromo.png" /></p>
+<p><img alt="create_profile_andromo" src="../../../../../../images/create_profile_andromo.png?raw=true" /></p>
 <p>输入个名字,点击创建(Create), 然后在MyProfile看到一个新的Profile。</p>
-<p><img alt="myprofile_andromo" src="../../../../../../images/myprofile_andromo.png" /></p>
+<p><img alt="myprofile_andromo" src="../../../../../../images/myprofile_andromo.png?raw=true" /></p>
 <p>点击创建报告(Create Report), 等待片刻, 提示创建成功, 然后就可以点击新生成的报告查看, 报告页有点长, 有兴趣的可以自己去建一个看看,我这里只截取2个看一下。如果数据和我这里的不一致是正常的,因为AppInner每天的数据都在快速增长。</p>
 <p>第一个是类型分布,看起来音乐和娱乐类型加起来超过了1/3。</p>
-<p><img alt="AndromoApp_report_1" src="../../../../../../images/AndromoApp_report_1.png" /></p>
+<p><img alt="AndromoApp_report_1" src="../../../../../../images/AndromoApp_report_1.png?raw=true" /></p>
 <p>第二个是下载量, 绝大部多数 App 都没什么人用, 但是也有30个超过了百万, 甚至还有2个超过了5百万。</p>
-<p><img alt="AndromoApp_report_2" src="../../../../../../images/AndromoApp_report_2.png" /></p>
+<p><img alt="AndromoApp_report_2" src="../../../../../../images/AndromoApp_report_2.png?raw=true" /></p>
 <p>Andromo 在其主页上宣称其是: <code>The #1 Android App Maker Platform.</code>, 是真的吗? </p>
 <h2>02 平台统计</h2>
 <p>作者统计了20个平台在GooglePlay上的App数量。直接列表如下:</p>
@@ -265,8 +265,8 @@ This post is also available in:
 <li>activity: 2个平台应用包含特定的activity</li>
 </ol>
 <p>对上述数据绘制统计图:</p>
-<p><img alt="platform_1" src="../../../../../../images/no_code_platform_1.png" />
-<img alt="platform_2" src="../../../../../../images/no_code_platform_2.png" /></p>
+<p><img alt="platform_1" src="../../../../../../images/no_code_platform_1.png?raw=true" />
+<img alt="platform_2" src="../../../../../../images/no_code_platform_2.png?raw=true" /></p>
 <p>看来这个市场也已经趋于集中, Andromo + biznessapps 在20个厂商中占有超过了 <em>50%</em>, 加上 como 已经超过 <em>60%</em>。</p>
 <h2>03 总结</h2>
 <p>以上利用 AppInner 对 Andromo 等在线生成App平台在GooglePlay中实际的情况进行了下简单的统计, 时间有限, 没有进一步深入分析。 比如 gamesalad 虽然看上去占有率不高,但是其在游戏领域绝对是第一。有兴趣或有需要的同学可以对相关数据更深入的分析。</p>
@@ -300,7 +300,7 @@ This post is also available in:
                     <span>2</span>
 </a></li>
                 <li><a href="../../../../../tags.html#statistics-ref">statistics
-                    <span>4</span>
+                    <span>5</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
